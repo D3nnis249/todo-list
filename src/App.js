@@ -11,20 +11,20 @@ function App() {
     setInput(input);
   }
 
-  function addToDo(event) {
-    const addNewToDo = [...todos, { text: input, status: false }];
-    setTodos(addNewToDo);
+  function add(event) {
+    const addNewTodo = [...todos, { text: input, status: false }];
+    setTodos(addNewTodo);
     setInput("");
   }
-  function removeTodo(todoIndex) {
+  function remove(todoIndex) {
     const deleteTodo = todos.filter((todos, index) => index !== todoIndex);
     setTodos(deleteTodo);
   }
 
-  function toggleStatus(todoIndex) {
-    const newTodoStatus = [...todos];
-    newTodoStatus[todoIndex].status = !newTodoStatus[todoIndex].status;
-    setTodos(newTodoStatus);
+  function toggle(todoIndex) {
+    const Status = [...todos];
+    Status[todoIndex].status = !Status[todoIndex].status;
+    setTodos(Status);
   }
 
   return (
@@ -36,9 +36,9 @@ function App() {
             className="task-input"
             onChange={handleOnChange}
             value={input}
-            placeholder="new ToDo"
+            placeholder="new Todo..."
           ></input>
-          <button className="button-add" onClick={addToDo}>
+          <button className="button-add" onClick={add}>
             Add
           </button>
           <ul className="list">
@@ -49,13 +49,13 @@ function App() {
                   className={`button-complete ${
                     todos.status ? "highlight" : ""
                   }`}
-                  onClick={() => toggleStatus(index)}
+                  onClick={() => toggle(index)}
                 >
                   {todos.status ? "Done" : "Pending"}
                 </button>
                 <button
                   className="button-delete"
-                  onClick={() => removeTodo(index)}
+                  onClick={() => remove(index)}
                 >
                   X
                 </button>

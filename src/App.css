@@ -27,9 +27,9 @@
   background-color: #114a31;
   min-width: 450px;
   min-height: 650px;
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
-  box-shadow: 3px 6px 40px #000;
+  box-shadow: 3px 6px 60px #000;
   margin-bottom: 10px;
 }
 
@@ -37,6 +37,7 @@
   color: #fff;
   text-align: center;
   margin: 30px 0;
+  text-decoration: underline;
 }
 
 .task-input {
@@ -67,7 +68,7 @@
   gap: 20px;
   list-style: none;
   margin: 30px 0;
-  border: 2px solid #ccc;
+  border: 2px solid #c89666;
   border-radius: 10px;
   padding: 10px;
 }
@@ -78,23 +79,18 @@
   outline: none;
   cursor: pointer;
   background-color: transparent;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .button-complete {
-  color: #fbf30a;
+  color: #fbf30a; 
 }
 
 .button-delete {
   color: rgb(255, 0, 0);
 }
 
-.complete {
-  text-decoration-style: solid;
-  text-decoration-line: line-through;
-  text-decoration-color: #ff6c6c;
-  opacity: 0.6;
-}
+
 
 .list {
   width: 500px;
@@ -109,6 +105,8 @@
   text-align: left;
   font-size: 2rem;
   width: 400px;
+  color: rgb(0, 0, 0);
+  
 }
 input:focus,
 button:focus {
